@@ -369,7 +369,7 @@
         /* duration picker */
         .duration-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 8px;
             margin-bottom: 20px;
         }
@@ -735,6 +735,9 @@
                                 <button class="dur-btn" data-price="$30" onclick="selectDur(this,'full')">
                                     <div class="dur-period">Monthly</div>
                                 </button>
+                                <button class="dur-btn" data-price="$50" onclick="selectDur(this,'full')">
+                                    <div class="dur-period">Season</div>
+                                </button>
                             </div>
                             <div class="panel-price-display" id="full-price">$10</div>
                             <div class="panel-price-note">One-time payment · instant delivery</div>
@@ -808,6 +811,9 @@
                                 <button class="dur-btn" data-price="$20" onclick="selectDur(this,'rank')">
                                     <div class="dur-period">Monthly</div>
                                 </button>
+                                <button class="dur-btn" data-price="$35" onclick="selectDur(this,'rank')">
+                                    <div class="dur-period">Season</div>
+                                </button>
                             </div>
                             <div class="panel-price-display" id="rank-price">$8</div>
                             <div class="panel-price-note">One-time payment · instant delivery</div>
@@ -876,6 +882,9 @@
                                 </button>
                                 <button class="dur-btn" data-price="$15" onclick="selectDur(this,'light')">
                                     <div class="dur-period">Monthly</div>
+                                </button>
+                                <button class="dur-btn" data-price="$25" onclick="selectDur(this,'light')">
+                                    <div class="dur-period">Season</div>
                                 </button>
                             </div>
                             <div class="panel-price-display" id="light-price">$5</div>
