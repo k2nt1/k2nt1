@@ -8,14 +8,14 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; script-src 'self'; style-src 'self'; connect-src https://k2nt1.alwaysdata.net; img-src 'self'; object-src 'none'; form-action 'none'">
   <meta name="description" content="Check your subscription and download your latest available program.">
   <title>Customer downloads · Nexus</title>
-  <link rel="stylesheet" href="portal.css">
-  <script src="portal-config.js" defer></script>
-  <script src="portal.js" defer></script>
+  <link rel="stylesheet" href="portal.css?v=20261112-3">
+  <script src="portal-config.js?v=20261112-3" defer></script>
+  <script src="portal.js?v=20261112-3" defer></script>
 </head>
 <body>
   <div class="page">
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Nexus home"><span class="brand-mark" aria-hidden="true">N</span><span>NEXUS</span></a>
+      <a class="brand" href="/" aria-label="Nexus home"><img class="brand-mark brand-logo" src="nexus-logo.png" width="40" height="40" alt="" decoding="async"><span>NEXUS</span></a>
       <div class="header-actions"><span class="header-label" data-i18n="portal">Customer portal</span><button class="language-button" id="language" type="button" lang="ar">العربية</button></div>
     </header>
 
@@ -40,7 +40,7 @@
             <label for="license-key" data-i18n="keyLabel">License key</label>
             <div class="input-wrap"><input id="license-key" name="license_key" type="password" dir="ltr" minlength="4" maxlength="256" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Paste your license key" required aria-describedby="key-help form-error"><button class="key-toggle" id="key-toggle" type="button" aria-controls="license-key" aria-pressed="false" data-i18n="show">Show</button></div>
             <p class="field-help" id="key-help" data-i18n="keyHelp">Checking your key does not start its subscription timer.</p>
-            <div class="error" id="form-error" role="alert" hidden></div>
+            <div class="error" id="form-error" role="alert" hidden><span id="form-error-message"></span><span id="retry-countdown" class="retry-countdown" aria-live="off" hidden></span></div>
             <button class="primary-button" id="check-button" type="submit"><span data-i18n="check">Check my key</span><span aria-hidden="true">→</span></button>
           </form>
           <p class="card-footnote" data-i18n="keyFootnote">Your key is used for this check and is not saved in this browser.</p>
