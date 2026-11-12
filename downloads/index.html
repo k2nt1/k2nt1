@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; script-src 'self'; style-src 'self'; connect-src https://k2nt1.alwaysdata.net; img-src 'self'; object-src 'none'; form-action 'none'">
+  <meta name="description" content="Check your subscription and download your latest available program.">
+  <title>Customer downloads · Nexus</title>
+  <link rel="stylesheet" href="portal.css">
+  <script src="portal-config.js" defer></script>
+  <script src="portal.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Nexus home"><span class="brand-mark" aria-hidden="true">N</span><span>NEXUS</span></a>
+      <div class="header-actions"><span class="header-label" data-i18n="portal">Customer portal</span><button class="language-button" id="language" type="button" lang="ar">العربية</button></div>
+    </header>
+
+    <main id="main">
+      <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+        <div class="intro">
+          <p class="eyebrow"><span aria-hidden="true"></span><span data-i18n="welcomeLabel">YOUR DOWNLOADS, IN ONE PLACE</span></p>
+          <h1 id="welcome-title" data-i18n="headline">One key.<br>Your next download.</h1>
+          <p class="intro-copy" data-i18n="intro">Check your subscription and get the latest build available for your program.</p>
+          <ol class="steps">
+            <li><span class="step-number">01</span><div><strong data-i18n="step1">Enter your key</strong><p data-i18n="step1copy">Use the license key you received.</p></div></li>
+            <li><span class="step-number">02</span><div><strong data-i18n="step2">Check your subscription</strong><p data-i18n="step2copy">See your plan and expiration details.</p></div></li>
+            <li><span class="step-number">03</span><div><strong data-i18n="step3">Download your program</strong><p data-i18n="step3copy">Choose an available Windows build.</p></div></li>
+          </ol>
+        </div>
+        <section class="key-card" aria-labelledby="key-title">
+          <div class="card-icon" aria-hidden="true">↗</div>
+          <p class="eyebrow" data-i18n="access">LICENSE ACCESS</p>
+          <h2 id="key-title" data-i18n="keyTitle">Your key opens the door.</h2>
+          <p class="muted" data-i18n="keyIntro">Enter your license key to continue.</p>
+          <form id="key-form" autocomplete="off">
+            <label for="license-key" data-i18n="keyLabel">License key</label>
+            <div class="input-wrap"><input id="license-key" name="license_key" type="password" dir="ltr" minlength="4" maxlength="256" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Paste your license key" required aria-describedby="key-help form-error"><button class="key-toggle" id="key-toggle" type="button" aria-controls="license-key" aria-pressed="false" data-i18n="show">Show</button></div>
+            <p class="field-help" id="key-help" data-i18n="keyHelp">Checking your key does not start its subscription timer.</p>
+            <div class="error" id="form-error" role="alert" hidden></div>
+            <button class="primary-button" id="check-button" type="submit"><span data-i18n="check">Check my key</span><span aria-hidden="true">→</span></button>
+          </form>
+          <p class="card-footnote" data-i18n="keyFootnote">Your key is used for this check and is not saved in this browser.</p>
+          <noscript><p class="error">Enable JavaScript to check your key and view available downloads.</p></noscript>
+        </section>
+      </section>
+
+      <section class="account" id="account" aria-labelledby="account-title" hidden>
+        <div class="account-heading"><div><p class="eyebrow" data-i18n="verified">LICENSE VERIFIED</p><h1 id="account-title" tabindex="-1" data-i18n="accountTitle">Ready when you are.</h1></div><button class="secondary-button" type="button" id="sign-out" data-i18n="changeKey">Use another key</button></div>
+        <div class="account-layout">
+          <section class="subscription-card" aria-labelledby="subscription-title">
+            <div class="section-heading"><h2 id="subscription-title" data-i18n="subscriptionTitle">Your subscription</h2><span class="badge" id="license-status"></span></div>
+            <dl class="license-details" id="license-details"></dl>
+            <p class="field-help" id="pending-help" data-i18n="pendingHelp" hidden>Your subscription starts on your first successful sign-in inside the program.</p>
+          </section>
+          <section class="downloads-section" aria-labelledby="downloads-title">
+            <div class="section-heading"><div><h2 id="downloads-title" data-i18n="downloadsTitle">Available downloads</h2><p class="muted" data-i18n="downloadsCopy">The latest published builds for your license.</p></div><span class="count" id="release-count"></span></div>
+            <div class="empty-state" id="no-releases" hidden><span aria-hidden="true">↓</span><h3 data-i18n="noReleases">No downloads published yet.</h3><p data-i18n="noReleasesCopy">Your key is valid. Check again after a new build is published.</p></div>
+            <div id="releases" class="release-list"></div>
+          </section>
+        </div>
+        <p class="notice" id="download-status" role="status" aria-live="polite" hidden></p>
+        <p class="session-note" data-i18n="sessionNote">Download access lasts 15 minutes. Check your key again if your session expires.</p>
+      </section>
+    </main>
+    <footer class="site-footer"><span>NEXUS <span aria-hidden="true">/</span> <span data-i18n="footer">Customer downloads</span></span><span data-i18n="windows">Built for Windows.</span></footer>
+  </div>
+</body>
+</html>
